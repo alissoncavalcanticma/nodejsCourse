@@ -1,0 +1,38 @@
+extends ./main
+
+block content 
+    div.container.mg-top-25
+            form(action="#" method="post")
+                div.form-group
+                    input.form-control(
+                        type="text",
+                        name="nome",
+                        id="nome",
+                        placeholder="Nome",
+                        required
+                    )
+                div.form-group
+                    input.form-control(
+                        type="text",
+                        name="cnpj",
+                        id="cnpj",
+                        placeholder="CNPJ",
+                        required
+                    )
+                div.form-group
+                    input.form-control(
+                        type="text",
+                        name="telefone",
+                        id="telefone",
+                        placeholder="telefone",
+                        required
+                    )
+                div.form-group
+                    input.form-control(
+                        type="text",
+                        name="email",
+                        id="email",
+                        placeholder="E-mail",
+                        required
+                    )
+                button.btn.btn-primary.col-md-12(type="submit") Salvar

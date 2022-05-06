@@ -1,0 +1,21 @@
+extends ./main
+
+block content 
+    div.container
+        table.table.table-bordered 
+            thead 
+                tr 
+                    th Nome 
+                    th CNPJ 
+                    th Telefone 
+                    th E-mail
+                    th Actions
+            tbody 
+                tr 
+                    td Alisson 
+                    td 1098.12.123.123/0001
+                    td +55(81)9-8772-8732
+                    td alisson@devtest.com
+                    td 
+                        button.btn.btn-success(type="button") Editar 
+                        button.btn.btn-danger(type="button") Deletar

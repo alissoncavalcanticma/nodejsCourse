@@ -1,0 +1,10 @@
+npm commands:
+
+//instala todas as dependencias do projeto. Ex: ao clonar rep do github
+npm install
+
+//instalar modulos externos
+npm i modulo ( --save-dev (for dev) or --save (for production) ) (ex: npm i console-log-hello-world)
+
+//desinstalar módulos externos
+npm uninstall módulo
