@@ -8,6 +8,6 @@ module.exports = (sequelize, DataTypes) => {
         email: DataTypes.STRING,
         contato: DataTypes.STRING
     }, {
-        timesstamps: false
+        timestamps: false
     })
 }

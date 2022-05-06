@@ -31,6 +31,10 @@ app.set('views', path.join(__dirname, 'views'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
+//usando express no lugar do bodyParser
+//app.use(express.json())
+//app.use(express.urlencoded({extended: false}))
+
 require('./model/index')
 
 //midleware = Função executada após uma requisição definida
