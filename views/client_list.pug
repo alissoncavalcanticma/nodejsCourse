@@ -2,6 +2,7 @@ extends ./main
 
 block content 
     div.container
+        h2 #{title}
         table.table.table-bordered
             thead
                 tr
@@ -12,22 +13,17 @@ block content
                     th Contato 
                     th Ações 
             tbody 
-                tr
-                    td Client Name 
-                    td 31419836489173
-                    td 81982887382
-                    td client@client.com
-                    td Her 
-                    td 
-                        button.btn.btn-success(type="button") Editar
-                        button.btn.btn-danger(type="button") Deletar
-                
-                tr
-                    td Client Name 2
-                    td 3141983999993
-                    td 8198752836
-                    td client2@client2.com
-                    td Herman 
-                    td 
-                        button.btn.btn-success(type="button") Editar
-                        button.btn.btn-danger(type="button") Deletar
+                each client in clients
+                    tr
+                        td #{client.cliente} 
+                        td #{client.cnpj}
+                        td #{client.telefone}
+                        td #{client.email}
+                        td #{client.contato} 
+                        td 
+                            a(href="#", class="btn btn-success") Editar
+                            form(
+                                method="POST",
+                                action="/client", style="display:inline-block")
+                                input(type="hidden", name="_method", value="DELETE")
+                                button.btn.btn-danger(type="submit") Deletar
