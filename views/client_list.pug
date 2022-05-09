@@ -3,6 +3,14 @@ extends ./main
 block content 
     div.container
         h2 #{title}
+        if(msg === 1)
+            div.alert.alert-success Cliente cadastrado com sucesso! 
+        if(msg === 2)
+            div.alert.alert-danger Não foi possível cadastrar o cliente!
+        if(msg === 3)
+            div.alert.alert-success Cliente alterado com sucesso!
+        if(msg === 4)
+            div.alert.alert-success Não foi possível alterar o cadastro!
         table.table.table-bordered
             thead
                 tr
@@ -21,7 +29,7 @@ block content
                         td #{client.email}
                         td #{client.contato} 
                         td 
-                            a(href="#", class="btn btn-success") Editar
+                            a(href="/client/edit/" + client.id, class="btn btn-success") Editar
                             form(
                                 method="POST",
                                 action="/client", style="display:inline-block")

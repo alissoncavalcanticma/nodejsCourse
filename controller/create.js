@@ -8,5 +8,8 @@ const Cliente = require(path.join(__dirname, './../model/client'))(sequelize, Se
 module.exports = (req, res) => {
     Cliente
         .create(req.body)
-        .then(() => console.log('INSERT OK'))
+        .then(() => {
+            res.redirect('./client?msg=1')
+        })
+        .catch((err) => res.redirect('./client?msg=2'))
 }

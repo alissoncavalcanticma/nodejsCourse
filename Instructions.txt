@@ -8,3 +8,12 @@ npm i modulo ( --save-dev (for dev) or --save (for production) ) (ex: npm i cons
 
 //desinstalar módulos externos
 npm uninstall módulo
+
+
+
+
+
+=================================================
+Para usar update no crud instalar o method override
+
+npm -i method-override --save

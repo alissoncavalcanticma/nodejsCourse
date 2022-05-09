@@ -4,7 +4,7 @@ include ./mixins/form
 block content
     div.container.mg-top-25
             h2 Cadastro de Clientes
-            form(action="/client", method="post")
+            form(action="/client/" + client.id + "?_method=PUT", method="post")
                 +form(client)
                 
                 

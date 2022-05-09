@@ -6,11 +6,10 @@ let Cliente = require(path.join(__dirname, './../model/client'))(sequelize, Sequ
 
 module.exports = (req, res) => {
     Cliente
-        .update(req.body, {
-            where: {
-                id: req.params.id
-            }
+        .findByPk(req.params.id)
+        .then((client) => {
+            return res.render('client_edit', {
+                client: client
+            })
         })
-        .then(() => res.redirect('/client?msg=3'))
-        .catch((err) => res.redirect('/client?msg=4'))
 }

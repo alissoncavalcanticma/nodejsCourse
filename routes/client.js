@@ -4,6 +4,7 @@ const create = require('./../controller/create')
 const update = require('./../controller/update')
 const del = require('./../controller/del')
 const find = require('./../controller/find')
+const edit = require('./../controller/edit')
 
 
 //router para cliente_list
@@ -12,6 +13,8 @@ const find = require('./../controller/find')
 // })
 
 router.get('/', find)
+
+router.get('/edit/:id', edit)
 
 //router para client_new
 router.get('/new', (req, res) => {
